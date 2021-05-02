@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".drbot"></activity>
+        <activity android:name=".signup"></activity>
+        <activity android:name=".Timeline" />
+        <activity android:name=".drbot" />
         <activity android:name=".medstats" />
         <activity android:name=".symptommanagement" />
         <activity android:name=".home" />
