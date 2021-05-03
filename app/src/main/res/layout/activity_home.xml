@@ -10,71 +10,142 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hai there, Welcome back !!"
-        android:textSize="18sp"
+        android:text="Hai there,\nWelcome back !!"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="10dp"
+
+
+        android:textStyle="bold"
+        android:gravity="center|start"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.077" />
 
     <Button
         android:id="@+id/updatebutton"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="10dp"
+
+        android:gravity="center|start"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+
+
+        android:paddingBottom="20dp"
         android:text="Update profile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <Button
         android:id="@+id/symptombutton"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="10dp"
+
+        android:gravity="center|start"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+
+        android:paddingBottom="20dp"
         android:text="Symptom management"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updatebutton"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.071" />
 
     <Button
         android:id="@+id/bookslotbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="      Book my slot        "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="10dp"
+
+        android:gravity="center|start"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+
+
+        android:paddingBottom="20dp"
+        android:text="Book my slot"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/symptombutton"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/medrecordbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="10dp"
+
+        android:gravity="center|start"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+
+
+        android:paddingBottom="20dp"
         android:text="My medical statistics"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bookslotbutton"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.12" />
 
     <Button
         android:id="@+id/docbotbutton"
-        android:layout_width="wrap_content"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:text="        Doc bot        "
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="10dp"
+
+        android:gravity="center|start"
+        android:paddingStart="25dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="20dp"
+
+
+        android:paddingBottom="20dp"
+        android:text="Doc bot"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/medrecordbutton"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintVertical_bias="0.258" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

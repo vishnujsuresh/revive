@@ -10,22 +10,29 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="        This is a auto prediction mechanism use only if your doc is      unavailable!!!"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"
+        android:text="This is a auto prediction mechanism use only if your doc is unavailable!!!"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/autosymptom"
-        android:layout_width="229dp"
-        android:layout_height="36dp"
+        android:layout_width="324dp"
+        android:layout_height="316dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center|start"
         android:hint="provide your symptoms"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <Button
         android:id="@+id/autoresultbutton"
