@@ -21,23 +21,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        var auth = FirebaseAuth.getInstance();
 
 
 
         val signupvar= findViewById<Button>(R.id.signupButton)
         val loginvar= findViewById<Button>(R.id.login_button)
 
-        signupvar.setOnClickListener{
-           val intent = Intent(this@MainActivity,signup::class.java)
-            startActivity(intent)
-
-        }
-
         loginvar.setOnClickListener{
-            val intent = Intent(this@MainActivity,home::class.java)
-            startActivity(intent)
-
+          //  if ()
         }
 
 
