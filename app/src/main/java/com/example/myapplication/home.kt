@@ -3,12 +3,35 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.View
 import android.widget.Button
+import android.widget.TextView
+import com.google.firebase.database.*
 
 class home : AppCompatActivity() {
+
+    lateinit var mDatabase : DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val dispTxt =  findViewById<View>(R.id.textView6) as TextView
+
+        mDatabase = FirebaseDatabase.getInstance().getReference("Names")
+        mDatabase.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val result =snapshot.child("Names").toString()
+                dispTxt.text="Hai Welcom back" + result
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+
+
         val bookdrvar= findViewById<Button>(R.id.bookslotbutton)
         val personaldetailsvar= findViewById<Button>(R.id.updatebutton)
         val symptomsvar=findViewById<Button>(R.id.symptombutton)
@@ -36,4 +59,9 @@ class home : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+ /*   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.id.signout)
+        return super.onCreateOptionsMenu(menu)
+    } */
 }
