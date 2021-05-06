@@ -16,12 +16,12 @@ import com.google.firebase.auth.AuthResult
 
 class MainActivity : AppCompatActivity() {
 
-
+    val mAuth = FirebaseAuth.getInstance();
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var auth = FirebaseAuth.getInstance();
+
 
 
 
@@ -29,12 +29,28 @@ class MainActivity : AppCompatActivity() {
         val loginvar= findViewById<Button>(R.id.login_button)
 
         loginvar.setOnClickListener{
-          //  if ()
+          view->login()
         }
 
 
 
 
 }
+    private fun login () {
 
+        val emailTxt = findViewById<View>(R.id.loginmail) as EditText
+        val passwordTxt = findViewById<View>(R.id.password) as EditText
+        var email = emailTxt.text.toString()
+        var password = passwordTxt.text.toString()
+        if(!email.isEmpty() && !password.isEmpty()){
+
+
+
+
+        }
+        else
+        {
+            Toast.makeText(this,"Please provide the login details !!! ",Toast.LENGTH_LONG).show()
+        }
+    }
 }
