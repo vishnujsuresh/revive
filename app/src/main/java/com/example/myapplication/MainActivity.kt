@@ -28,11 +28,14 @@ class MainActivity : AppCompatActivity() {
         val signupvar= findViewById<Button>(R.id.signupButton)
         val loginvar= findViewById<Button>(R.id.login_button)
 
-        loginvar.setOnClickListener{
-          view->login()
-        }
+        loginvar.setOnClickListener(View.OnClickListener{
+          View->login()
+        } )
 
 
+       signupvar.setOnClickListener(View.OnClickListener{
+           View->register()
+       })
 
 
 }
@@ -44,7 +47,15 @@ class MainActivity : AppCompatActivity() {
         var password = passwordTxt.text.toString()
         if(!email.isEmpty() && !password.isEmpty()){
 
-
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this,OnCompleteListener{task ->
+                if (task.isSuccessful){
+                    startActivity(Intent(this,home::class.java))
+                    Toast.makeText(this,"Login Successful !! ",Toast.LENGTH_LONG).show()
+                }else
+                {
+                    Toast.makeText(this,"Login Failed , Incorrect details",Toast.LENGTH_LONG).show()
+                }
+            })
 
 
         }
@@ -52,5 +63,9 @@ class MainActivity : AppCompatActivity() {
         {
             Toast.makeText(this,"Please provide the login details !!! ",Toast.LENGTH_LONG).show()
         }
+    }
+    private fun register(){
+
+        startActivity(Intent(this,signup::class.java))
     }
 }
