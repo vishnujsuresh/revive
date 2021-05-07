@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -52,7 +53,8 @@ class signup : AppCompatActivity() {
                     val uid = user!!.uid
                     mDatabase.child(uid).child("Name").setValue(name)
                     Toast.makeText(this,"User Registered Successfully",Toast.LENGTH_LONG).show()
-
+                    startActivity(Intent(this,MainActivity::class.java))
+                    Toast.makeText(this,"login please",Toast.LENGTH_LONG).show()
                 }
                 else{
                     Toast.makeText(this,"ERROR :( try again ", Toast.LENGTH_LONG).show()
