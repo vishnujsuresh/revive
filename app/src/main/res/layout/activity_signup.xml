@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/signbg"
     tools:context=".signup">
 
 
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name"
+        android:textStyle="italic"
         android:inputType="textPersonName"
         android:drawableStart="@drawable/ic_baseline_face_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,6 +30,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email id"
+        android:textStyle="italic"
         android:inputType="textEmailAddress"
         android:drawableStart="@drawable/ic_baseline_email_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +46,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
+        android:textStyle="italic"
         android:inputType="textPassword"
         android:drawableStart="@drawable/ic_baseline_lock_24"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,6 +62,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Confirm password"
+        android:textStyle="italic"
         android:inputType="textPassword"
         android:drawableStart="@drawable/ic_baseline_lock_open_24"
         app:layout_constraintBottom_toBottomOf="parent"
