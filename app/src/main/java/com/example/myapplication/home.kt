@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.database.*
 
 class home : AppCompatActivity() {
@@ -27,7 +28,7 @@ class home : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@home,";(",Toast.LENGTH_LONG).show()
             }
         })
 
