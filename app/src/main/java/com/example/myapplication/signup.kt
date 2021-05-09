@@ -52,9 +52,9 @@ class signup : AppCompatActivity() {
                     val user = mAuth.currentUser
                     val uid = user!!.uid
                     mDatabase.child(uid).child("Name").setValue(name)
-                    Toast.makeText(this,"User Registered Successfully",Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this,MainActivity::class.java))
-                    Toast.makeText(this,"login please",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Hai ${name} you are Successfully Registered",Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this,home::class.java))
+
                 }
                 else{
                     Toast.makeText(this,"ERROR :( try again ", Toast.LENGTH_LONG).show()

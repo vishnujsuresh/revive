@@ -12,11 +12,14 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.AuthResult
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MainActivity : AppCompatActivity() {
 
     val mAuth = FirebaseAuth.getInstance();
+    lateinit var mDatabase : DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
         val signupvar= findViewById<Button>(R.id.signupButton)
         val loginvar= findViewById<Button>(R.id.login_button)

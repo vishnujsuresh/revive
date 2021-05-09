@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/moremenu"
+        app:showAsAction="ifRoom"
+        android:title="More">
+    </item>
+
+    <item android:title="Home"
+        app:showAsAction="never"
+        android:id="@+id/homemenu"></item>
+    <item android:title="Update Profile"
+        app:showAsAction="never"
+        android:id="@+id/updatemenu"></item>
+    <item android:title="Book Slot"
+        app:showAsAction="never"
+        android:id="@+id/bookmenu"></item>
+    <item android:title="Med Stat"
+        app:showAsAction="never"
+        android:id="@+id/medstatmenu"></item>
+    <item android:title="Dr.Bot"
+        app:showAsAction="never"
+        android:id="@+id/drbotmenu"></item>
+    <item android:title="Signout"
+        app:showAsAction="never"
+        android:id="@+id/signoutmenu"></item>
+
+</menu>
