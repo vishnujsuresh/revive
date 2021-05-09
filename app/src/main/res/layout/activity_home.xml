@@ -5,7 +5,7 @@
     android:id="@+id/si"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/baymaxbg"
+   android:background="@color/black"
     tools:context=".home">
 
     <TextView
@@ -23,7 +23,6 @@
         android:drawableStart="@mipmap/ic_launcher_foreground"
         android:gravity="center|start"
         android:text="Hai \nWelcome , "
-        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
