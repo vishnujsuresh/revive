@@ -22,7 +22,7 @@
 
         android:drawableStart="@mipmap/ic_launcher_foreground"
         android:gravity="center|start"
-        android:text="Hai \nWelcome , "
+        android:text="Hai \nWelcome  "
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

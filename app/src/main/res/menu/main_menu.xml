@@ -2,9 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/moremenu"
+        android:id="@+id/signoutmenu"
         app:showAsAction="ifRoom"
-        android:title="More">
+        android:icon="@drawable/ic_baseline_power_settings_new_24"
+        android:title="Sign Out">
     </item>
 
     <item android:title="Home"
@@ -22,8 +23,6 @@
     <item android:title="Dr.Bot"
         app:showAsAction="never"
         android:id="@+id/drbotmenu"></item>
-    <item android:title="Signout"
-        app:showAsAction="never"
-        android:id="@+id/signoutmenu"></item>
+
 
 </menu>

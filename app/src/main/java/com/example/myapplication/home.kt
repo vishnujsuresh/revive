@@ -20,18 +20,34 @@ class home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
 
-
-       /* fun onCreateOptionsMenu(menu: Menu?): Boolean {
-            menuInflater.inflate(R.menu.main_menu,menu)
+        fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.main_menu,menu);
             return true
         }
 
-         fun onOptionsItemSelected(item: MenuItem) {
-            when(item.itemId){
-                R.id.updatemenu -> startActivity(Intent(this,personaldetailsactivity::class.java))
+         fun onOptionsItemSelected(item: MenuItem): Boolean {
+            val id = item.itemId;
+            if (id == R.id.signoutmenu){
+                Toast.makeText(this, "Siging Out", Toast.LENGTH_SHORT).show()
+                return true
+            }else if (id == R.id.homemenu){
+                startActivity(Intent(this,home::class.java))
+                return true
+            }else if (id == R.id.updatemenu){
+                startActivity(Intent(this,personaldetailsactivity::class.java))
+                return true
+            }else if (id == R.id.bookmenu){
+                startActivity(Intent(this,bookdr::class.java))
+                return true
+            }else if (id == R.id.medstatmenu){
+                startActivity(Intent(this,medstats::class.java))
+                return true
+            }else if (id == R.id.drbotmenu){
+                startActivity(Intent(this,drbot::class.java))
+                return true
             }
-        } */
-
+            return super.onOptionsItemSelected(item)
+        }
 
 
 
