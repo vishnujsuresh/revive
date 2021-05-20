@@ -3,17 +3,71 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.security.identity.AccessControlProfileId
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
+import android.widget.Toolbar
+import com.example.myapplication.R.id.profupdate
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 class personaldetailsactivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personaldetailsactivity)
+
+
+
+
+
+        //updating data to firebase
+        var database = FirebaseDatabase.getInstance().reference
+        val update= findViewById<Button>(R.id.profupdate)
+        update.setOnClickListener {
+            var pssn = findViewById<EditText>(R.id.profssn)
+            val pname= findViewById<EditText>(R.id.profname)
+            val paddr = findViewById<EditText>(R.id.profaddr)
+            val pmob= findViewById<EditText>(R.id.profmobno)
+            val page = findViewById<EditText>(R.id.profage)
+            val pgender= findViewById<EditText>(R.id.profgender)
+
+            var ssn= pssn.text.toString().toInt()
+            var name=pname.text.toString()
+            var addr=paddr.text.toString()
+            var mob=pmob.text.toString().toInt()
+            var age=page.text.toString().toInt()
+            var gender=pgender.text.toString()
+            database.setValue(user(ssn,name,addr,mob,age,gender))
+        }
+
+
+        //   setSupportActionBar(findViewByIdR.id.updatetoolbar))
+
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu,menu)
         return true
     }
 
@@ -21,7 +75,7 @@ class personaldetailsactivity : AppCompatActivity() {
         val id = item.itemId;
         if (id == R.id.signoutmenu){
             Toast.makeText(this, "Siging Out", Toast.LENGTH_SHORT).show()
-            return true
+             return true
         }else if (id == R.id.homemenu){
             startActivity(Intent(this,home::class.java))
             return true
@@ -42,3 +96,5 @@ class personaldetailsactivity : AppCompatActivity() {
 
     }
 }
+
+

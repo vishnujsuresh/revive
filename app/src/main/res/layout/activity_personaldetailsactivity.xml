@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
     tools:context=".personaldetailsactivity">
 
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/updatetoolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginBottom="36dp"
@@ -54,7 +56,7 @@
         android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="Enter your Name"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         android:drawableEnd="@drawable/ic_baseline_person_pin_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

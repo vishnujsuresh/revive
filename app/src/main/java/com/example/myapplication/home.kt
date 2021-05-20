@@ -66,7 +66,7 @@ class home : AppCompatActivity() {
 
         val dispTxt =  findViewById<View>(R.id.textView6) as TextView
 
-        mDatabase = FirebaseDatabase.getInstance().getReference("Names")
+       /* mDatabase = FirebaseDatabase.getInstance().getReference("Names")
         mDatabase.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 val result =snapshot.child("Names").toString()
@@ -76,7 +76,7 @@ class home : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(this@home,";(",Toast.LENGTH_LONG).show()
             }
-        })
+        }) */
 
 
         val bookdrvar= findViewById<Button>(R.id.bookslotbutton)
