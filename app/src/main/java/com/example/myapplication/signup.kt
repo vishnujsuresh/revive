@@ -24,7 +24,7 @@ class signup : AppCompatActivity() {
 
         val regBtn = findViewById<View>(R.id.confirm) as Button
 
-        mDatabase =FirebaseDatabase.getInstance().getReference("Names")
+        mDatabase =FirebaseDatabase.getInstance().getReference("Signup")
 
         regBtn.setOnClickListener(View.OnClickListener{
             View ->register()
@@ -51,7 +51,7 @@ class signup : AppCompatActivity() {
 
                     val user = mAuth.currentUser
                     val uid = user!!.uid
-                    mDatabase.child(uid).child("Name").setValue(name)
+                    mDatabase.child(uid).child("Signup").setValue(name)
                     Toast.makeText(this, "Hai ${name} you are Successfully Registered",Toast.LENGTH_LONG).show()
                     startActivity(Intent(this,personaldetailsactivity::class.java))
                     Toast.makeText(this,"update your profile",Toast.LENGTH_LONG).show()

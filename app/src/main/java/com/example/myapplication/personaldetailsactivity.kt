@@ -26,11 +26,13 @@ class personaldetailsactivity : AppCompatActivity() {
 
              val mAuth = FirebaseAuth.getInstance()
             //updating data to firebase
-            var database = FirebaseDatabase.getInstance().reference
+            var database = FirebaseDatabase.getInstance().getReference("user")
             val update = findViewById<Button>(R.id.profupdate)
             val username = mAuth.currentUser
             val uid = username!!.uid
+
              update.setOnClickListener {
+
                 var pssn = findViewById<EditText>(R.id.profssn)
                 val pname = findViewById<EditText>(R.id.profname)
                 val paddr = findViewById<EditText>(R.id.profaddr)
@@ -41,9 +43,10 @@ class personaldetailsactivity : AppCompatActivity() {
                 var ssn = pssn.text.toString().toInt()
                 var name = pname.text.toString()
                 var addr = paddr.text.toString()
-                var mob = pmob.text.toString().toLong()
+                var mob = pmob.text.toString()
                 var age = page.text.toString().toInt()
                 var gender = pgender.text.toString()
+
                 database.child(uid.toString()).setValue(user(uid,ssn, name, addr, mob, age, gender))
                  Toast.makeText(this, "profile Updated ", Toast.LENGTH_LONG).show()
                  startActivity(Intent(this,home::class.java))
@@ -53,7 +56,6 @@ class personaldetailsactivity : AppCompatActivity() {
         //   setSupportActionBar(findViewByIdR.id.updatetoolbar))
 
     }
-
 
 
 
