@@ -7,11 +7,13 @@ class user {
     var mobno=0
     var age=0
     var gender=""
-    constructor(ssn:Int,name:String,addr:String,mobno:Int,age:Int,gender:String){
+    var uid=""
+    constructor(uid:String,ssn:Int,name:String,addr:String,mobno:Long,age:Int,gender:String){
         this.ssn=ssn
+        this.uid=uid
         this.name=name
         this.addr=addr
-        this.mobno=mobno
+        this.mobno= mobno.toInt()
         this.age=age
         this.gender=gender
     }

@@ -53,7 +53,8 @@ class signup : AppCompatActivity() {
                     val uid = user!!.uid
                     mDatabase.child(uid).child("Name").setValue(name)
                     Toast.makeText(this, "Hai ${name} you are Successfully Registered",Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this,home::class.java))
+                    startActivity(Intent(this,personaldetailsactivity::class.java))
+                    Toast.makeText(this,"update your profile",Toast.LENGTH_LONG).show()
 
                 }
                 else{
