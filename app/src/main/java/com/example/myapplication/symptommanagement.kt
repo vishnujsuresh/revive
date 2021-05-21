@@ -29,6 +29,7 @@ class symptommanagement : AppCompatActivity() {
             var more = smore.text.toString()
             var symptomdata=add+":-"+more
             database.child(uid.toString()).setValue(symptom(uid,symptomdata))
+
             Toast.makeText(this, "Symptom ${add} Added ", Toast.LENGTH_LONG).show()
             startActivity(Intent(this,home::class.java))
         }
