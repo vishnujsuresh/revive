@@ -17,4 +17,5 @@ class user {
         this.age=age
         this.gender=gender
     }
+
 }

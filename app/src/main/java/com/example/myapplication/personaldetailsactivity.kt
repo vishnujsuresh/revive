@@ -33,26 +33,36 @@ class personaldetailsactivity : AppCompatActivity() {
 
              update.setOnClickListener {
 
-                var pssn = findViewById<EditText>(R.id.profssn)
-                val pname = findViewById<EditText>(R.id.profname)
-                val paddr = findViewById<EditText>(R.id.profaddr)
-                val pmob = findViewById<EditText>(R.id.profmobno)
-                val page = findViewById<EditText>(R.id.profage)
-                val pgender = findViewById<EditText>(R.id.profgender)
+                 var pssn = findViewById<EditText>(R.id.profssn)
+                 val pname = findViewById<EditText>(R.id.profname)
+                 val paddr = findViewById<EditText>(R.id.profaddr)
+                 val pmob = findViewById<EditText>(R.id.profmobno)
+                 val page = findViewById<EditText>(R.id.profage)
+                 val pgender = findViewById<EditText>(R.id.profgender)
 
-                var ssn = pssn.text.toString().toInt()
-                var name = pname.text.toString()
-                var addr = paddr.text.toString()
-                var mob = pmob.text.toString()
-                var age = page.text.toString().toInt()
-                var gender = pgender.text.toString()
+                 var ssn = pssn.text.toString().toInt()
+                 var name = pname.text.toString()
+                 var addr = paddr.text.toString()
+                 var mob = pmob.text.toString()
+                 var age = page.text.toString().toInt()
+                 var gender = pgender.text.toString()
 
-                database.child(uid.toString()).setValue(user(uid,ssn, name, addr, mob, age, gender))
-                 Toast.makeText(this, "profile Updated ", Toast.LENGTH_LONG).show()
-                 startActivity(Intent(this,home::class.java))
-            }
+                 if (mob.length > 0 && ssn>0 && name.length>0 && addr.length>0 && age>0 && gender.length>0) {
+                     if (mob.length == 10) {
+                         database.child(uid.toString())
+                             .setValue(user(uid, ssn, name, addr, mob, age, gender))
+                         Toast.makeText(this, "profile Updated ", Toast.LENGTH_LONG).show()
+                         startActivity(Intent(this, home::class.java))
+                     }
+                     else{
+                         Toast.makeText(this, "Check Your Mobile  Number", Toast.LENGTH_LONG).show()
+                     }
+                 }
+                 else{
+                     Toast.makeText(this, "All fields must be filled", Toast.LENGTH_LONG).show()
+                 }
 
-
+             }
         //   setSupportActionBar(findViewByIdR.id.updatetoolbar))
 
     }

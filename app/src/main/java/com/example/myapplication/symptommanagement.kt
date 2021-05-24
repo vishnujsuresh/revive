@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.hsalf.smilerating.SmileRating
 
 class symptommanagement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,21 +22,32 @@ class symptommanagement : AppCompatActivity() {
         val sysupdate = findViewById<Button>(R.id.applybutton)
         val username = mAuth.currentUser
         val uid = username!!.uid
+
+
+
+
         sysupdate.setOnClickListener{
             var sadd = findViewById<EditText>(R.id.addsymptoms)
             val smore = findViewById<EditText>(R.id.description)
 
             var add = sadd.text.toString()
             var more = smore.text.toString()
-            var symptomdata=add+":-"+more
-            database.child(uid.toString()).setValue(symptom(uid,symptomdata))
+            if (add.isNotEmpty()&&more.isNotEmpty() ){
+                     var symptomdata=add+":- "+more
+                    database.child(uid.toString()).setValue(symptom(uid,symptomdata))
 
-            Toast.makeText(this, "Symptom ${add} Added ", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this,home::class.java))
+                    Toast.makeText(this, "Symptom ${add} Added ", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this,home::class.java))
+            }
+            else {
+                Toast.makeText(this, "All fields must be filled", Toast.LENGTH_LONG).show()
+
+
+            }
+            }
         }
 
 
 
 
-    }
 }
