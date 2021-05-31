@@ -55,10 +55,11 @@ class signup : AppCompatActivity() {
                     Toast.makeText(this, "Hai ${name} you are Successfully Registered",Toast.LENGTH_LONG).show()
                     startActivity(Intent(this,personaldetailsactivity::class.java))
                     Toast.makeText(this,"update your profile",Toast.LENGTH_LONG).show()
+                    finish()
 
                 }
                 else{
-                    Toast.makeText(this,"ERROR :( try again ", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, task.exception!!.message.toString(), Toast.LENGTH_LONG).show()
                 }
             })
 

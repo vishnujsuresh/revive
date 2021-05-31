@@ -11,7 +11,9 @@
 
     <EditText
         android:id="@+id/SName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name"
@@ -28,7 +30,9 @@
 
     <EditText
         android:id="@+id/mail"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Email id"
@@ -45,7 +49,9 @@
 
     <EditText
         android:id="@+id/signpass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
@@ -62,7 +68,9 @@
 
     <EditText
         android:id="@+id/signpasscon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Confirm password"

@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="SSN or Reg No:"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text=""
         android:drawableEnd="@drawable/ic_baseline_assignment_24"
         app:layout_constraintBottom_toBottomOf="parent"

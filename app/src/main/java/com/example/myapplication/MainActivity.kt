@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         val signupvar= findViewById<Button>(R.id.signupButton)
         val loginvar= findViewById<Button>(R.id.login_button)
+        val pass = findViewById(R.id.tv_forgot)as TextView
 
         loginvar.setOnClickListener(View.OnClickListener{
           View->login()
@@ -40,6 +42,8 @@ class MainActivity : AppCompatActivity() {
        signupvar.setOnClickListener(View.OnClickListener{
            View->register()
        })
+        pass.setOnClickListener(View.OnClickListener{
+            startActivity(Intent(this,forgot::class.java)) })
 
 
 }
@@ -55,9 +59,10 @@ class MainActivity : AppCompatActivity() {
                 if (task.isSuccessful){
                     startActivity(Intent(this,home::class.java))
                     Toast.makeText(this,"Login Successful !! ",Toast.LENGTH_LONG).show()
+                    finish()
                 }else
                 {
-                    Toast.makeText(this,"Login Failed , Incorrect details",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, task.exception!!.message.toString(), Toast.LENGTH_LONG).show()
                 }
             })
 
