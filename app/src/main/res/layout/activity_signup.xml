@@ -10,7 +10,7 @@
 
 
     <EditText
-        android:id="@+id/SName"
+        android:id="@+id/dr_SName"
         android:layout_width="match_parent"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_bias="0.236" />
 
     <EditText
-        android:id="@+id/mail"
+        android:id="@+id/dr_smail"
         android:layout_width="match_parent"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -44,11 +44,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SName"
+        app:layout_constraintTop_toBottomOf="@+id/dr_SName"
         app:layout_constraintVertical_bias="0.094" />
 
     <EditText
-        android:id="@+id/signpass"
+        android:id="@+id/dr_signpass"
         android:layout_width="match_parent"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -63,11 +63,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mail"
+        app:layout_constraintTop_toBottomOf="@+id/dr_smail"
         app:layout_constraintVertical_bias="0.074" />
 
     <EditText
-        android:id="@+id/signpasscon"
+        android:id="@+id/dr_signpasscon"
         android:layout_width="match_parent"
         android:layout_marginEnd="50dp"
         android:layout_marginStart="50dp"
@@ -82,13 +82,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signpass"
+        app:layout_constraintTop_toBottomOf="@+id/dr_signpass"
         app:layout_constraintVertical_bias="0.11" />
 
     S
 
     <Button
-        android:id="@+id/confirm"
+        android:id="@+id/dr_sconfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
@@ -96,17 +96,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signpasscon"
+        app:layout_constraintTop_toBottomOf="@+id/dr_signpasscon"
         app:layout_constraintVertical_bias="0.252" />
 
     <TextView
-        android:id="@+id/create"
+        android:id="@+id/dr_create_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create a new account"
         android:textColor="@color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/SName"
+        app:layout_constraintBottom_toTopOf="@+id/dr_SName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

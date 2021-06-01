@@ -22,7 +22,7 @@ class signup : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
 
 
-        val regBtn = findViewById<View>(R.id.confirm) as Button
+        val regBtn = findViewById<View>(R.id.dr_sconfirm) as Button
 
         mDatabase =FirebaseDatabase.getInstance().getReference("Signup")
 
@@ -34,10 +34,10 @@ class signup : AppCompatActivity() {
     }
 
     private fun register() {
-        val nameTxt = findViewById<View>(R.id.SName) as EditText
-        val emailTxt = findViewById<View>(R.id.mail) as EditText
-        val passwordTxt = findViewById<View>(R.id.signpass) as EditText
-        val passTxtCon = findViewById<View>(R.id.signpasscon) as EditText
+        val nameTxt = findViewById<View>(R.id.dr_SName) as EditText
+        val emailTxt = findViewById<View>(R.id.dr_smail) as EditText
+        val passwordTxt = findViewById<View>(R.id.dr_signpass) as EditText
+        val passTxtCon = findViewById<View>(R.id.dr_signpasscon) as EditText
         var email = emailTxt.text.toString()
         var password = passwordTxt.text.toString()
         var conpassword = passTxtCon.text.toString()
