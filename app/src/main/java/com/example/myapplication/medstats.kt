@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -24,6 +26,13 @@ class medstats : AppCompatActivity() {
         //updating data to firebase
         var database = FirebaseDatabase.getInstance().getReference("symptom")
         getData()
+
+        var homebtn = findViewById<ImageButton>(R.id.medstat_home)
+        homebtn.setOnClickListener {
+            Toast.makeText(this,"Home",Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,home::class.java))
+        }
+
     }
     private fun getData(){
 

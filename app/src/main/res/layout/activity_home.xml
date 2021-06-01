@@ -152,6 +152,19 @@
         app:layout_constraintTop_toBottomOf="@+id/medrecordbutton"
         app:layout_constraintVertical_bias="0.258" />
 
+    <ImageButton
+        android:id="@+id/signout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="@color/browser_actions_bg_grey"
+        android:rotationY="1"
+        app:layout_constraintBottom_toTopOf="@+id/updatebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        app:srcCompat="@drawable/ic_baseline_power_settings_new_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

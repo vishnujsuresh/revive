@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
@@ -20,6 +21,12 @@ class forgot : AppCompatActivity() {
         pass.setOnClickListener(View.OnClickListener{
                 View->reset()
         })
+
+        var homebtn = findViewById<ImageButton>(R.id.forgot_home)
+        homebtn.setOnClickListener {
+
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 
    private fun reset(){

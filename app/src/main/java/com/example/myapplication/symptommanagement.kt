@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -45,6 +46,12 @@ class symptommanagement : AppCompatActivity() {
 
             }
             }
+
+        var homebtn = findViewById<ImageButton>(R.id.sysmptom_home)
+        homebtn.setOnClickListener {
+            Toast.makeText(this,"Home",Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,home::class.java))
+        }
         }
 
 

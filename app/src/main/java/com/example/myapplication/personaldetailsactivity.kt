@@ -7,10 +7,7 @@ import android.security.identity.AccessControlProfileId
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import android.widget.Toolbar
+import android.widget.*
 import com.example.myapplication.R.id.profupdate
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -64,6 +61,12 @@ class personaldetailsactivity : AppCompatActivity() {
 
              }
         //   setSupportActionBar(findViewByIdR.id.updatetoolbar))
+
+        var homebtn = findViewById<ImageButton>(R.id.update_home)
+        homebtn.setOnClickListener {
+            Toast.makeText(this,"Home",Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,home::class.java))
+        }
 
     }
 
