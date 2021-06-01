@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".forgot"></activity>
+        <activity android:name=".dr_forgot"></activity>
+        <activity android:name=".dr_signup" />
+        <activity android:name=".forgot" />
         <activity android:name=".welcome" />
         <activity android:name=".signup" />
         <activity android:name=".drbot" />

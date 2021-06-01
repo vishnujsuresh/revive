@@ -3,7 +3,6 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -11,8 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.analytics.FirebaseAnalytics
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -30,9 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
-        val signupvar= findViewById<Button>(R.id.signupButton)
-        val loginvar= findViewById<Button>(R.id.login_button)
+        val signupvar= findViewById<Button>(R.id.dr_signupButton)
+        val loginvar= findViewById<Button>(R.id.dr_login_button)
         val pass = findViewById(R.id.tv_forgot)as TextView
+        val drlink = findViewById(R.id.dr_link_tv)as TextView
 
         loginvar.setOnClickListener(View.OnClickListener{
           View->login()
@@ -45,12 +43,13 @@ class MainActivity : AppCompatActivity() {
         pass.setOnClickListener(View.OnClickListener{
             startActivity(Intent(this,forgot::class.java)) })
 
-
+        drlink.setOnClickListener(View.OnClickListener{
+            startActivity(Intent(this,welcome::class.java)) })
 }
     private fun login () {
 
-        val emailTxt = findViewById<View>(R.id.loginmail) as EditText
-        val passwordTxt = findViewById<View>(R.id.password) as EditText
+        val emailTxt = findViewById<View>(R.id.dr_loginmail) as EditText
+        val passwordTxt = findViewById<View>(R.id.dr_password) as EditText
         var email = emailTxt.text.toString()
         var password = passwordTxt.text.toString()
         if(!email.isEmpty() && !password.isEmpty()){
