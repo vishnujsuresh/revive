@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
-        val signupvar= findViewById<Button>(R.id.dr_signupButton)
-        val loginvar= findViewById<Button>(R.id.dr_login_button)
+        val signupvar= findViewById<Button>(R.id.signupButton)
+        val loginvar= findViewById<Button>(R.id.login_button)
         val pass = findViewById(R.id.tv_forgot)as TextView
         val drlink = findViewById(R.id.dr_link_tv)as TextView
 
@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
 }
     private fun login () {
 
-        val emailTxt = findViewById<View>(R.id.dr_loginmail) as EditText
-        val passwordTxt = findViewById<View>(R.id.dr_password) as EditText
+        val emailTxt = findViewById<View>(R.id.loginmail) as EditText
+        val passwordTxt = findViewById<View>(R.id.password) as EditText
         var email = emailTxt.text.toString()
         var password = passwordTxt.text.toString()
         if(!email.isEmpty() && !password.isEmpty()){
