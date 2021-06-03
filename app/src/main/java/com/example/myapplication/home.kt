@@ -60,7 +60,7 @@ class home : AppCompatActivity() {
 
         signout.setOnClickListener{
 
-           // mAuth.signOut()
+            mAuth.signOut()
             Toast.makeText(this, "signing out  ", Toast.LENGTH_LONG).show()
             startActivity(Intent(this,MainActivity::class.java))
         }
