@@ -63,9 +63,10 @@ class home : AppCompatActivity() {
             mAuth.signOut()
             Toast.makeText(this, "signing out  ", Toast.LENGTH_LONG).show()
             startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
 
-       // finish()
+
 
 
 

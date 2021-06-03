@@ -46,8 +46,7 @@ class personaldetailsactivity : AppCompatActivity() {
 
                  if (mob.length > 0 && ssn>0 && name.length>0 && addr.length>0 && age>0 && gender.length>0) {
                      if (mob.length == 10) {
-                         database.child(uid.toString())
-                             .setValue(user(uid, ssn, name, addr, mob, age, gender))
+                         database.child(uid.toString()).setValue(user(uid, ssn, name, addr, mob, age, gender))
                          Toast.makeText(this, "profile Updated ", Toast.LENGTH_LONG).show()
                          startActivity(Intent(this, home::class.java))
                      }

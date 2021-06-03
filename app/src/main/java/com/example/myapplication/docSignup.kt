@@ -47,7 +47,7 @@ class docSignup : AppCompatActivity() {
                         val uid = user!!.uid
                         mDatabase.child(uid).child("Doc_Signup").setValue(dr_name)
                         Toast.makeText(this, "Hai ${dr_name} you are Successfully Registered", Toast.LENGTH_LONG).show()
-                        //startActivity(Intent(this,personaldetailsactivity::class.java))
+                        //startActivity(Intent(this,docUpdate::class.java))
                         Toast.makeText(this,"update your profile", Toast.LENGTH_LONG).show()
                         finish()
 
