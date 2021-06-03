@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -25,7 +26,10 @@ class welcome : AppCompatActivity() {
         dsignbtn.setOnClickListener(View.OnClickListener{
                 View->signupfun()
         } )
-
+        val repass = findViewById(R.id.dr_tv_forgot)as TextView
+        repass.setOnClickListener{
+            startActivity(Intent(this,DocForgot::class.java))
+        }
 
     }
     private fun signupfun()
