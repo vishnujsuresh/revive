@@ -21,6 +21,6 @@ class welcome : AppCompatActivity() {
     }
     private fun signupfun()
     {
-        startActivity(Intent(this,dr_signup::class.java))
+        startActivity(Intent(this,docSignup::class.java))
     }
 }
