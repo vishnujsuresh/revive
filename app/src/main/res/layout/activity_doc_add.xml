@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <EditText
-        android:id="@+id/dr_aname"
+        android:id="@+id/dr_assn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dr_add_tv" />
 
     <EditText
-        android:id="@+id/dr_amail"
+        android:id="@+id/dr_aname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -47,10 +47,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dr_aname" />
+        app:layout_constraintTop_toBottomOf="@+id/dr_assn" />
 
     <EditText
-        android:id="@+id/dr_apass"
+        android:id="@+id/dr_aclinic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -61,7 +61,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dr_amail" />
+        app:layout_constraintTop_toBottomOf="@+id/dr_aname" />
 
     <EditText
         android:id="@+id/dr_aphn"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dr_apass" />
+        app:layout_constraintTop_toBottomOf="@+id/dr_aclinic" />
 
     <EditText
         android:id="@+id/dr_aexp"

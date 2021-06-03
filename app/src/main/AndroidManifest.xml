@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".DocAdd"></activity>
+        <activity android:name=".DocHome"></activity>
+        <activity android:name=".DocAdd" />
         <activity android:name=".docSignup" />
         <activity android:name=".forgot" />
         <activity android:name=".welcome" />
