@@ -6,4 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".DocForgot">
 
+    <ImageView
+        android:id="@+id/dr_bay_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/dr_textView11"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:gravity="center"
+        android:text="Please provide the \n registered e-mail id and \n press the button"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dr_reset_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dr_bay_imageview"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <EditText
+        android:id="@+id/dr_formail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter the E-Mail id"
+        android:inputType="textEmailAddress"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dr_reset_pass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dr_textView11" />
+
+    <Button
+        android:id="@+id/dr_reset_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dr_formail"
+        app:layout_constraintVertical_bias="0.925"
+        app:srcCompat="@drawable/ic_baseline_restore_24" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
