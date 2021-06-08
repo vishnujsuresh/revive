@@ -1,10 +1,10 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class bookdr : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class bookdr : AppCompatActivity() {
         var homebtn = findViewById<ImageButton>(R.id.bookdr_home)
         homebtn.setOnClickListener {
             Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this,home::class.java))
+            startActivity(Intent(this,MainActivityR2::class.java))
         }
 
     }
