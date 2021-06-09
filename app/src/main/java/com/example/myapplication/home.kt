@@ -8,9 +8,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.databinding.ActivityHomeBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_medstats.*
 
 
 class home : AppCompatActivity() {
@@ -23,6 +23,11 @@ class home : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val remind = findViewById<Button>(R.id.reminder_btn)
+        remind.setOnClickListener {
+            startActivity(Intent(this,MainActivityR2::class.java))
+        }
 
 /*
         fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -110,6 +115,10 @@ class home : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
+
+
 
  /*   override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.id.signout)

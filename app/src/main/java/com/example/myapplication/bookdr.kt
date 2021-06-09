@@ -15,7 +15,7 @@ class bookdr : AppCompatActivity() {
         var homebtn = findViewById<ImageButton>(R.id.bookdr_home)
         homebtn.setOnClickListener {
             Toast.makeText(this,"Home", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this,MainActivityR2::class.java))
+            startActivity(Intent(this,home::class.java))
         }
 
     }

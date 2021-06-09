@@ -1,15 +1,14 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
-import com.hsalf.smilerating.SmileRating
 
 class symptommanagement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +22,7 @@ class symptommanagement : AppCompatActivity() {
         val sysupdate = findViewById<Button>(R.id.applybutton)
         val username = mAuth.currentUser
         val uid = username!!.uid
+
 
 
 

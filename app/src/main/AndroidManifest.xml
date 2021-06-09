@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".activity_add_reminder"></activity>
+        <activity android:name=".View_symptoms"></activity>
+        <activity android:name=".activity_add_reminder" />
         <activity android:name=".item_reminder" />
         <activity android:name=".MainActivityR2" />
         <activity android:name=".DocForgot" />

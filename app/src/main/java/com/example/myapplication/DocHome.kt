@@ -1,11 +1,11 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.media.Image
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -19,7 +19,10 @@ class DocHome : AppCompatActivity() {
 
 
         val dr_signout =findViewById<ImageButton>(R.id.dr_home_signout)
-
+        val dr_sym = findViewById<Button>(R.id.dr_sym_btn)
+        dr_sym.setOnClickListener {
+            startActivity(Intent(this,View_symptoms::class.java))
+        }
 
         val username = mAuth.currentUser
         val uid = username!!.uid
