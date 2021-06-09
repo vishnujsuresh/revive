@@ -14,29 +14,23 @@ class symptommanagement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_symptommanagement)
-
-
         val mAuth = FirebaseAuth.getInstance()
         //updating data to firebase
         var database = FirebaseDatabase.getInstance().getReference("symptom")
         val sysupdate = findViewById<Button>(R.id.applybutton)
         val username = mAuth.currentUser
         val uid = username!!.uid
-
-
-
-
-
-
         sysupdate.setOnClickListener{
             var sadd = findViewById<EditText>(R.id.addsymptoms)
             val smore = findViewById<EditText>(R.id.description)
+            val sy_name = findViewById<EditText>(R.id.sym_name)
 
             var add = sadd.text.toString()
             var more = smore.text.toString()
-            if (add.isNotEmpty()&&more.isNotEmpty() ){
+            var s_name = sy_name.text.toString()
+            if (add.isNotEmpty()&&more.isNotEmpty() && s_name.isNotEmpty() ){
                      var symptomdata=add+":- "+more
-                    database.child(uid.toString()).setValue(symptom(uid,symptomdata))
+                    database.child(uid.toString()).setValue(symptom(uid,s_name,symptomdata))
 
                     Toast.makeText(this, "Symptom ${add} Added ", Toast.LENGTH_LONG).show()
                     startActivity(Intent(this,home::class.java))
