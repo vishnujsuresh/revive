@@ -17,9 +17,16 @@ class DocHome : AppCompatActivity() {
         var database = FirebaseDatabase.getInstance().getReference("user")
         val mAuth = FirebaseAuth.getInstance()
 
+        val dpro=findViewById<Button>(R.id.dr_update)
 
         val dr_signout =findViewById<ImageButton>(R.id.dr_home_signout)
         val dr_sym = findViewById<Button>(R.id.dr_sym_btn)
+
+        dr_sym.setOnClickListener {
+
+
+
+        }
         dr_sym.setOnClickListener {
             startActivity(Intent(this,View_symptoms::class.java))
         }

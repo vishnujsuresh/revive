@@ -37,7 +37,6 @@
         android:textSize="20dp"
         android:hint="Enter your login id"
         android:textColor="@color/white"
-        android:textStyle="italic"
         android:inputType="textEmailAddress"
         android:drawableEnd="@drawable/ic_baseline_account_box_24"
         app:layout_constraintBottom_toBottomOf="parent"
